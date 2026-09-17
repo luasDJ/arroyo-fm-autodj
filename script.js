@@ -1,15 +1,13 @@
 const adminCode = Array.from({ length: 7 }, (_, index) => String.fromCharCode(49 + index)).join("");
 const playlistSource = [
-  { title: "NUEVAYoL (Clean Version)", artist: "Bad Bunny", duration: "3:00", mood: "Urban", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
-  { title: "Shape of You", artist: "Ed Sheeran", duration: "3:00", mood: "Pop", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-  { title: "Despacito (Remix)", artist: "Luis Fonsi & Daddy Yankee & Justin Bieber", duration: "3:00", mood: "Latino", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
-  { title: "Don't Start Now (Lyrics)", artist: "Dua Lipa", duration: "3:00", mood: "Dance", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
-  { title: "Pepas (LetraLyrics)", artist: "Farruko", duration: "3:00", mood: "Reggaeton", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
-  { title: "Rude (Lyrics)", artist: "MAGIC!", duration: "3:00", mood: "Reggae", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
-  { title: "Potra Salvaje (Hard Remix)", artist: "Isabel Aaiún", duration: "3:00", mood: "Remix", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
-  { title: "HIT THE JACKPOT! [Official Music Video]", artist: "GameboyJones", duration: "3:00", mood: "Electro", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
-  { title: "La Graciosa", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
-  { title: "Baile inolvidable", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" }
+  { title: "Arroyo FM Mix 01", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+  { title: "Arroyo FM Mix 02", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+  { title: "Arroyo FM Mix 03", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+  { title: "Arroyo FM Mix 04", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+  { title: "Arroyo FM Mix 05", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+  { title: "Arroyo FM Mix 06", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+  { title: "Arroyo FM Mix 07", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+  { title: "Arroyo FM Mix 08", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" }
 ];
 
 const programmingSource = [
@@ -129,8 +127,9 @@ function syncAudioSource() {
   if (!audioPlayer) return;
   const currentTrack = getCurrentTrack();
   if (!currentTrack) return;
-  audioPlayer.src = currentTrack.audio;
+  audioPlayer.src = currentTrack.audio + "?t=" + Date.now();
   audioPlayer.load();
+  audioPlayer.crossOrigin = "anonymous";
 }
 
 function togglePlayback() {
