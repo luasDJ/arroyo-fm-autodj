@@ -14,5 +14,9 @@
   {
     "hora": "20:00",
     "titulo": "Noche en azul"
+  },
+  {
+    "hora": "22:00",
+    "titulo": "Hits de la colección"
   }
 ]

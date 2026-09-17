@@ -1,256 +1,75 @@
 [
   {
-    "title": "- Como Camaron  Videoclip",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/- Como Camaron _Videoclip_.m4a"
-  },
-  {
-    "title": "Al nacer",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Al nacer.mp4"
-  },
-  {
-    "title": "BAILE INoLVIDABLE  Letra",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/BAILE INoLVIDABLE _Letra_.m4a"
-  },
-  {
-    "title": "BLOODY BRAZIL 320k",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/BLOODY BRAZIL_320k.mp3"
-  },
-  {
     "title": "NUEVAYoL (Clean Version)",
     "artist": "Bad Bunny",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Bad Bunny - NUEVAYoL (Clean Version).mp3"
-  },
-  {
-    "title": "Beeper",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Beeper.mp4"
-  },
-  {
-    "title": "SUPERHÉROES (Videoclip Oficial) [acco5Djs0Qc]",
-    "artist": "Beret, Mr Rain",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Beret, Mr Rain - SUPERHÉROES (Videoclip Oficial) [acco5Djs0Qc].mp3"
-  },
-  {
-    "title": "no tiene sentido (Video Oficial) 320k",
-    "artist": "Beéle",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Beéle - no tiene sentido (Video Oficial)_320k.mp3"
-  },
-  {
-    "title": "CREEPER VS ZOMBIE REMIX  Prod. Willi.Ch [VERSION A]",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/CREEPER VS ZOMBIE REMIX  Prod. Willi.Ch [VERSION A].mp3"
-  },
-  {
-    "title": "Como Si Fueras a Morir Ma ana",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Como Si Fueras a Morir Ma_ana.m4a"
-  },
-  {
-    "title": "Cake by the Ocean (Clean Version) lyrics [4b6xdHsIIQ4]",
-    "artist": "DNCE",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/DNCE - Cake by the Ocean (Clean Version) lyrics [4b6xdHsIIQ4].mp3"
-  },
-  {
-    "title": "Dai Dai",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Dai Dai.m4a"
-  },
-  {
-    "title": "Luis Fonsi & Daddy Yankee & Justin Bieber",
-    "artist": "Despacito (Remix)",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Despacito (Remix) - Luis Fonsi & Daddy Yankee & Justin Bieber.mp3"
-  },
-  {
-    "title": "Dia delicia",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Dia delicia.mp4"
-  },
-  {
-    "title": "Don't Start Now (Lyrics)",
-    "artist": "Dua Lipa",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Dua Lipa - Don't Start Now (Lyrics).mp3"
-  },
-  {
-    "title": "Levitating Featuring DaBaby (Official Music Video)",
-    "artist": "Dua Lipa",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Dua Lipa - Levitating Featuring DaBaby (Official Music Video).mp3"
+    "mood": "Urban",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
   },
   {
     "title": "Shape of You",
     "artist": "Ed Sheeran",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Ed Sheeran - Shape of You.mp3"
+    "mood": "Pop",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
   },
   {
-    "title": "FLOW LETAL  Base de rap   Pistas de rap agresivo 2023   Instrumental de rap agresivo 2023 320k",
-    "artist": "Arroyo FM",
+    "title": "Despacito (Remix)",
+    "artist": "Luis Fonsi & Daddy Yankee & Justin Bieber",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/FLOW LETAL  Base de rap _ Pistas de rap agresivo 2023 _ Instrumental de rap agresivo 2023_320k.mp3"
+    "mood": "Latino",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+  },
+  {
+    "title": "Don't Start Now (Lyrics)",
+    "artist": "Dua Lipa",
+    "duration": "3:00",
+    "mood": "Dance",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
   },
   {
     "title": "Pepas (LetraLyrics)",
     "artist": "Farruko",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Farruko - Pepas (LetraLyrics).mp3"
+    "mood": "Reggaeton",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
   },
   {
-    "title": "Focus 3",
-    "artist": "Arroyo FM",
+    "title": "Rude (Lyrics)",
+    "artist": "MAGIC!",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Focus 3.mp4"
+    "mood": "Reggae",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
   },
   {
-    "title": "HIT THE JACKPOT! [Official Music Video] 320k",
-    "artist": "GameboyJones",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/GameboyJones - HIT THE JACKPOT! [Official Music Video]_320k.mp3"
-  },
-  {
-    "title": "Gozalo",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Gozalo.mp4"
-  },
-  {
-    "title": "Homage funk",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Homage funk.mp4"
-  },
-  {
-    "title": "Black Gryph0n & Baasik 320k",
-    "artist": "INSANE (A Hazbin Hotel Song)",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/INSANE (A Hazbin Hotel Song) - Black Gryph0n & Baasik_320k.mp3"
-  },
-  {
-    "title": "Insane",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Insane.mp4"
-  },
-  {
-    "title": "Potra Salvaje (Hard Remix) ft. Fernando Moreno",
+    "title": "Potra Salvaje (Hard Remix)",
     "artist": "Isabel Aaiún",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Isabel Aaiún - Potra Salvaje (Hard Remix) ft. Fernando Moreno.mp3"
+    "mood": "Remix",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
   },
   {
-    "title": "Funky Towel (Cockroach Musical) (HQ)",
-    "artist": "Joe's Apartment",
+    "title": "HIT THE JACKPOT! [Official Music Video]",
+    "artist": "GameboyJones",
     "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Joe's Apartment - Funky Towel (Cockroach Musical) (HQ).mp4"
-  },
-  {
-    "title": "Beauty And A Beat (Official Music Video) ft. Nicki Minaj 320k",
-    "artist": "Justin Bieber",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Justin Bieber - Beauty And A Beat (Official Music Video) ft. Nicki Minaj_320k.mp3"
+    "mood": "Electro",
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
   },
   {
     "title": "La Graciosa",
     "artist": "Arroyo FM",
     "duration": "3:00",
     "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/La Graciosa.m4a"
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
   },
   {
-    "title": "La Morocha",
+    "title": "Baile inolvidable",
     "artist": "Arroyo FM",
     "duration": "3:00",
     "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/La Morocha.m4a"
-  },
-  {
-    "title": "Life force",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Life force.mp4"
-  },
-  {
-    "title": "Luck Ra  Bzrp Music Sessions, Vol. 61",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Luck Ra_ Bzrp Music Sessions, Vol. 61.mp3"
-  },
-  {
-    "title": "L∩a armour toujours",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/L∩a armour toujours.mp4"
-  },
-  {
-    "title": "Rude (Lyrics)",
-    "artist": "MAGIC!",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/MAGIC! - Rude (Lyrics).mp3"
-  },
-  {
-    "title": "Max verstappen",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Max verstappen.mp4"
-  },
-  {
-    "title": "Megalovania",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Megalovania.mp4"
-  },
+    "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"
+  }
+],
   {
     "title": "ESA DIVA  Spain   Official Music Video  #Eurovision2025",
     "artist": "Melody",
