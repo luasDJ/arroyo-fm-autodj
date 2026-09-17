@@ -1,0 +1,18 @@
+[
+  {
+    "hora": "08:00",
+    "titulo": "Morning Mix"
+  },
+  {
+    "hora": "12:00",
+    "titulo": "Clásicos del verano"
+  },
+  {
+    "hora": "16:00",
+    "titulo": "Energía urbana"
+  },
+  {
+    "hora": "20:00",
+    "titulo": "Noche en azul"
+  }
+]

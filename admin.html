@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arroyo FM Admin</title>
+    <meta name="description" content="Panel de administración de Arroyo FM AutoDJ." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <div id="admin-lock" class="admin-lock">
+      <div class="admin-lock-card panel">
+        <p class="eyebrow small">ACCESO RESTRINGIDO</p>
+        <h2>Panel de administración</h2>
+        <p class="lock-copy">Introduce el código para acceder al AutoDJ.</p>
+        <label class="lock-field">
+          <span>Código</span>
+          <input id="admin-pin" type="password" maxlength="7" placeholder="Ingrese el código" />
+        </label>
+        <button id="unlock-admin" class="primary-button" type="button">Entrar</button>
+      </div>
+    </div>
+
+    <div id="admin-app" class="page-shell admin-shell hidden">
+      <header class="topbar admin-topbar">
+        <div class="brand" aria-label="Arroyo FM logo">
+          <img src="assets/logo.svg" alt="Logo de Arroyo FM" class="brand-logo" />
+          <div class="brand-copy">
+            <span class="brand-name">Arroyo FM</span>
+            <span class="brand-tag">Control del canal</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegación del panel">
+          <a href="index.html">Inicio</a>
+          <a href="#dashboard" class="active">Dashboard</a>
+          <a href="#songs">Canciones</a>
+          <a href="#controls">Motor</a>
+        </nav>
+
+        <div class="admin-header-actions">
+          <a href="index.html" class="nav-cta secondary">Ver player</a>
+        </div>
+      </header>
+
+      <main id="dashboard" class="admin-layout">
+        <aside class="admin-sidebar panel">
+          <p class="eyebrow small">PANEL</p>
+          <h2>AutoDJ</h2>
+
+          <ul class="sidebar-menu">
+            <li><a href="#dashboard" class="active">Resumen</a></li>
+            <li><a href="#songs">Gestión de canciones</a></li>
+            <li><a href="#playlists">Playlists</a></li>
+            <li><a href="#controls">Motor de reproducción</a></li>
+          </ul>
+        </aside>
+
+        <section class="admin-content">
+          <div class="summary-grid">
+            <article class="dashboard-card panel">
+              <span class="card-label">Estado</span>
+              <strong>AutoDJ activo</strong>
+              <small>Servicio en línea</small>
+            </article>
+
+            <article class="dashboard-card panel">
+              <span class="card-label">Lista</span>
+              <strong id="playlist-count-admin">0 canciones</strong>
+              <small>En la cola</small>
+            </article>
+
+            <article class="dashboard-card panel">
+              <span class="card-label">Fuente</span>
+              <strong>Playlist local</strong>
+              <small>Sincronizada</small>
+            </article>
+
+            <article class="dashboard-card panel">
+              <span class="card-label">Modo</span>
+              <strong>Loop infinito</strong>
+              <small>Sin interrupción</small>
+            </article>
+          </div>
+
+          <div class="player-link-box panel">
+            <div>
+              <p class="eyebrow small">PLAYER PÚBLICO</p>
+              <h3>Enlace del reproductor</h3>
+            </div>
+            <a href="index.html">http://localhost:8000/index.html</a>
+          </div>
+
+          <section id="songs" class="panel admin-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow small">GESTIÓN</p>
+                <h3>Playlist del AutoDJ</h3>
+              </div>
+            </div>
+
+            <form id="song-form" class="song-form">
+              <div class="field-row">
+                <label>
+                  <span>Título</span>
+                  <input type="text" name="title" placeholder="Ej. Days of Gold" required />
+                </label>
+
+                <label>
+                  <span>Artista</span>
+                  <input type="text" name="artist" placeholder="Ej. Valley Echo" required />
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  <span>Duración</span>
+                  <input type="text" name="duration" placeholder="Ej. 3:48" required />
+                </label>
+
+                <label>
+                  <span>Género</span>
+                  <input type="text" name="mood" placeholder="Ej. Indie pop" required />
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  <span>Archivo de audio</span>
+                  <input type="text" name="audio" placeholder="media/Musica - copia (2)/titulo.mp3" required />
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="primary-button">Añadir a la cola</button>
+                <button type="reset" class="secondary-button">Limpiar</button>
+              </div>
+            </form>
+          </section>
+
+          <section id="playlists" class="panel admin-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow small">LISTA</p>
+                <h3>Playlist actual</h3>
+              </div>
+              <span class="pill">AutoDJ</span>
+            </div>
+
+            <ul id="admin-playlist" class="admin-playlist"></ul>
+          </section>
+
+          <section id="controls" class="panel admin-panel controls-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow small">MOTOR</p>
+                <h3>Controles del AutoDJ</h3>
+              </div>
+            </div>
+
+            <div class="control-buttons">
+              <button id="admin-play" type="button" class="primary-button">Iniciar reproducción</button>
+              <button id="admin-pause" type="button" class="secondary-button">Pausar</button>
+              <button id="admin-next" type="button" class="secondary-button">Saltar canción</button>
+            </div>
+
+            <div class="toggle-list">
+              <label class="switch-line">
+                <span>Modo automático</span>
+                <input type="checkbox" checked />
+              </label>
+              <label class="switch-line">
+                <span>Loop infinito</span>
+                <input type="checkbox" checked />
+              </label>
+              <label class="switch-line">
+                <span>Programación automática</span>
+                <input type="checkbox" checked />
+              </label>
+            </div>
+          </section>
+
+          <section class="panel admin-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow small">PROGRAMACIÓN</p>
+                <h3>Editar horario</h3>
+              </div>
+            </div>
+
+            <form id="schedule-form" class="schedule-form">
+              <label>
+                <span>Lista de programación</span>
+                <textarea id="schedule-json" rows="10" spellcheck="false"></textarea>
+              </label>
+              <div class="form-actions">
+                <button type="submit" class="primary-button">Guardar programación</button>
+              </div>
+            </form>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
