@@ -69,33 +69,4 @@
     "mood": "AutoDJ",
     "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"
   }
-],
-  {
-    "title": "ESA DIVA  Spain   Official Music Video  #Eurovision2025",
-    "artist": "Melody",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Melody - ESA DIVA  Spain   Official Music Video  #Eurovision2025.mp3"
-  },
-  {
-    "title": "Mente má",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Mente má.mp4"
-  },
-  {
-    "title": "Mira el vídeo de Uptown Funk de Mark Ronson con Bruno Mars!",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Mira el vídeo de Uptown Funk de Mark Ronson con Bruno Mars!.mp3"
-  },
-  {
-    "title": "Montagem abnormal",
-    "artist": "Arroyo FM",
-    "duration": "3:00",
-    "mood": "AutoDJ",
-    "audio": "media/Musica - copia (2)/Montagem abnormal.mp4"
-  }
 ]
