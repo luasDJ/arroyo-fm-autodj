@@ -1,4 +1,5 @@
 const adminCode = Array.from({ length: 7 }, (_, index) => String.fromCharCode(49 + index)).join("");
+const FALLBACK_AUDIO = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
 const playlistSource = [
   { title: "Arroyo FM Mix 01", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
   { title: "Arroyo FM Mix 02", artist: "Arroyo FM", duration: "3:00", mood: "AutoDJ", audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
@@ -126,16 +127,27 @@ function updateTrackDisplay() {
 function syncAudioSource() {
   if (!audioPlayer) return;
   const currentTrack = getCurrentTrack();
-  if (!currentTrack) return;
-  audioPlayer.src = currentTrack.audio + "?t=" + Date.now();
+  const targetAudio = currentTrack && currentTrack.audio ? currentTrack.audio : FALLBACK_AUDIO;
+  audioPlayer.src = `${targetAudio}?t=${Date.now()}`;
   audioPlayer.load();
   audioPlayer.crossOrigin = "anonymous";
+  audioPlayer.muted = false;
 }
 
 function togglePlayback() {
   if (!audioPlayer) return;
-  if (audioPlayer.paused) audioPlayer.play();
-  else audioPlayer.pause();
+
+  const playPromise = audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+  if (playPromise && typeof playPromise.then === "function") {
+    playPromise.catch(() => {
+      const fallbackTrack = getCurrentTrack() || { audio: FALLBACK_AUDIO };
+      audioPlayer.src = `${fallbackTrack.audio}?t=${Date.now()}`;
+      audioPlayer.load();
+      audioPlayer.play().catch(() => {
+        if (playButton) playButton.textContent = "▶";
+      });
+    });
+  }
 }
 
 function changeTrack(direction) {
@@ -174,25 +186,32 @@ function unlockAdmin() {
   }
 }
 
-if (audioPlayer) {
+function initializePlayer() {
+  if (!audioPlayer) return;
+
   audioPlayer.addEventListener("loadedmetadata", handleAudioMetaLoaded);
   audioPlayer.addEventListener("timeupdate", handleTimeUpdate);
   audioPlayer.addEventListener("play", () => { if (playButton) playButton.textContent = "❚❚"; });
   audioPlayer.addEventListener("pause", () => { if (playButton) playButton.textContent = "▶"; });
+  audioPlayer.addEventListener("error", () => {
+    const fallbackTrack = getCurrentTrack() || { audio: FALLBACK_AUDIO };
+    audioPlayer.src = `${fallbackTrack.audio}?t=${Date.now()}`;
+    audioPlayer.load();
+  });
   audioPlayer.addEventListener("ended", () => {
     changeTrack(1);
-    audioPlayer.play();
+    audioPlayer.play().catch(() => {});
   });
-}
 
-if (playButton) playButton.addEventListener("click", togglePlayback);
-if (prevButton) prevButton.addEventListener("click", () => changeTrack(-1));
-if (nextButton) nextButton.addEventListener("click", () => changeTrack(1));
-if (progressBar) {
-  progressBar.addEventListener("input", (event) => {
-    if (!audioPlayer || !audioPlayer.duration) return;
-    audioPlayer.currentTime = (Number(event.target.value) / 100) * audioPlayer.duration;
-  });
+  if (playButton) playButton.addEventListener("click", togglePlayback);
+  if (prevButton) prevButton.addEventListener("click", () => changeTrack(-1));
+  if (nextButton) nextButton.addEventListener("click", () => changeTrack(1));
+  if (progressBar) {
+    progressBar.addEventListener("input", (event) => {
+      if (!audioPlayer || !audioPlayer.duration) return;
+      audioPlayer.currentTime = (Number(event.target.value) / 100) * audioPlayer.duration;
+    });
+  }
 }
 
 if (unlockButton) unlockButton.addEventListener("click", unlockAdmin);
@@ -241,6 +260,7 @@ if (adminPlayButton) adminPlayButton.addEventListener("click", () => togglePlayb
 if (adminPauseButton) adminPauseButton.addEventListener("click", () => audioPlayer && audioPlayer.pause());
 if (adminNextButton) adminNextButton.addEventListener("click", () => changeTrack(1));
 
+initializePlayer();
 renderProgramming();
 updateTrackDisplay();
 syncAudioSource();
